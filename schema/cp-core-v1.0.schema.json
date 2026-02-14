@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/giorgioroth/continuumport-cp-core/main/schema/cp-core-v1.0.schema.json",
+  "title": "ContinuumPort CP-Core v1.0",
+  "description": "Lossy semantic compression for cross-model task continuity. Preserves intent/constraints/decisions, NOT implementation determinism.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cp_version", "intent", "state_summary", "progress"],
+  "properties": {
+    "cp_version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Fixed version identifier. Must be exactly '1.0'."
+    },
+    "intent": {
+      "type": "string",
+      "maxLength": 2000,
+      "description": "The North Star. Declarative desired end-state. No process history."
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 1000
+      },
+      "uniqueItems": true,
+      "default": [],
+      "description": "Negative space: what the AI MUST NOT do or change."
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 1000
+      },
+      "uniqueItems": true,
+      "default": [],
+      "description": "Committed choices: path-finding options already exhausted or fixed."
+    },
+    "state_summary": {
+      "type": "string",
+      "maxLength": 4000,
+      "description": "Declarative snapshot of the present. No narrative or temporal language."
+    },
+    "progress": {
+      "type": "string",
+      "enum": ["active", "blocked", "completed"],
+      "description": "Semantic work state. 'blocked' means continuation requires external input."
+    }
+  }
+}
