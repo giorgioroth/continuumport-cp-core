@@ -1,0 +1,19 @@
+{
+  "cp_version": "1.0",
+  "intent": "Implement a real-time collaborative text editor with CRDT-based conflict resolution, cursor awareness, and offline-first behavior.",
+  "constraints": [
+    "Must function offline for up to 7 days with automatic synchronization on reconnection",
+    "Bundle size under 150kB gzipped",
+    "Support at least 50 concurrent editors per document",
+    "No server-side persistent document storage"
+  ],
+  "decisions": [
+    "Using Yjs as CRDT implementation",
+    "WebRTC for peer-to-peer transport",
+    "Quill.js as editor foundation",
+    "IndexedDB for local persistence",
+    "Cursor positions encoded as relative offsets"
+  ],
+  "state_summary": "Yjs document synchronization functional between peers. WebRTC signaling established. Cursor awareness implemented but inconsistent during rapid edits. Offline edit queue operational; reconnection after extended offline periods causes merge anomalies requiring investigation.",
+  "progress": "blocked"
+}
