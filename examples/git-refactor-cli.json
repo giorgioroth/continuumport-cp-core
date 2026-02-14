@@ -1,0 +1,18 @@
+{
+  "cp_version": "1.0",
+  "intent": "Refactor an existing Git CLI wrapper to support interactive staging and pluggable merge strategies while preserving full backward compatibility with existing automation scripts.",
+  "constraints": [
+    "Must not break existing shell scripts relying on current CLI interface",
+    "Exit codes must remain unchanged",
+    "No external dependencies beyond Python 3.8 standard library",
+    "Configuration path is fixed at /etc/gitcli/config.yaml"
+  ],
+  "decisions": [
+    "Using Click framework for CLI abstraction (not argparse)",
+    "Merge strategies implemented as plugins under plugins/ directory",
+    "Interactive staging via prompt_toolkit TUI",
+    "Persistent state stored in ~/.gitcli/state.db (SQLite)"
+  ],
+  "state_summary": "Core CLI migrated to Click. Status, commit, and push commands operational. Interactive staging supports file-level selection but lacks hunk-level granularity. Plugin architecture defined but dynamic loading not implemented. Backward compatibility validated against existing integration scripts.",
+  "progress": "active"
+}
