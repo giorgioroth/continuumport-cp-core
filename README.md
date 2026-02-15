@@ -43,7 +43,7 @@ Instead, CP-Core preserves the **semantic boundary**:
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://continuumport.org/schema/cp-core-v1.0.schema.json",
+ "$id": "https://raw.githubusercontent.com/giorgioroth/continuumport-cp-core/main/schema/cp-core-v1.0.schema.json",
   "title": "ContinuumPort CP-Core v1.0",
   "description": "Lossy semantic compression for cross-model task continuity. Preserves intent/constraints/decisions, NOT implementation determinism.",
   "type": "object",
