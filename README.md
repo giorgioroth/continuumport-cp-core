@@ -226,10 +226,7 @@ Monitor usage for 3-6 months before considering evolution.
 
 ## Examples
 
-See the [`examples/`](examples/) directory for:
-
-- ✅ Good capsule examples (git-refactor-cli.json, yjs-collaboration.json)
-- ❌ Out-of-scope anti-patterns (debugging, precision tasks)
+See the [`examples/`](examples/) directory for canonical reference capsules demonstrating proper CP-Core usage.
 
 ---
 
