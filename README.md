@@ -240,6 +240,19 @@ Contributions are welcome! Please:
 
 ---
 
+## Papers
+
+### Structural Modes of Continuity in Adaptive Systems
+SSRN Working Paper
+
+- PDF (GitHub canonical version):  
+  [Structural_Modes_of_Continuity.pdf](papers/Structural_Modes_of_Continuity.pdf)
+
+- SSRN abstract page:  
+  (coming soon)
+
+---
+
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
