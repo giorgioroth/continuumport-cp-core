@@ -6,6 +6,10 @@ CP-Core v1.0 is a lossy semantic compression format designed for **directional c
 
 ---
 
+https://gi0rgioroth.blogspot.com/2026/02/ai-architectural-thinking.html
+
+---
+
 ## Design Philosophy: Portability > Fidelity
 
 CP-Core operates on the principle that AI models are non-deterministic and diverse. Trying to force "Model B" to perfectly replicate the internal state of "Model A" leads to fragile, suboptimal code.
