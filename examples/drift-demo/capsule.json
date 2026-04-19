@@ -1,0 +1,19 @@
+{
+  "cp_version": "1.0",
+  "intent": "Build a minimal REST API with token-based authentication.",
+  "constraints": [
+    "REST only — no GraphQL",
+    "No ORM — raw queries or direct access",
+    "No caching layer in this phase",
+    "Token-based authentication (JWT)",
+    "Minimal dependencies"
+  ],
+  "decisions": [
+    "In-memory store for simplicity",
+    "JWT for auth tokens",
+    "No database abstraction layer",
+    "No frontend — API only"
+  ],
+  "state_summary": "Basic endpoint structure defined. Authentication not yet implemented.",
+  "progress": "active"
+}
