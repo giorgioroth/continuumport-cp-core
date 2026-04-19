@@ -1,54 +1,71 @@
-# CP-Core Canonical Examples
+# Drift Demo (v1 — concept)
 
-This directory contains official reference examples of CP-Core capsules.
+Illustrates directional drift across model runs with and without a CP-Core capsule.
 
-These are not templates.
-They are normative demonstrations of correct usage.
+## What this shows
 
----
+- How constraints are violated without a capsule
+- How direction is preserved with CP-Core
 
-## git-refactor-cli.json
-
-**Domain:** CLI tool refactoring  
-**Status:** Active (mid-task)
-
-Demonstrates:
-- Backward compatibility as constraint
-- Architecture decisions captured explicitly
-- Clear separation between requirements and implementation
-- Declarative state reporting
-
-Key lesson:
-Constraints define boundaries.
-Decisions define commitments.
-State describes present capability.
+This demo illustrates the failure mode.  
+It does not constitute empirical measurement.
 
 ---
 
-## yjs-collaboration.json
+## How to run
 
-**Domain:** Real-time collaborative system  
-**Status:** Blocked
+```bash
+# Without API key (uses mock models)
+python run_drift_demo.py
 
-Demonstrates:
-- Quantified performance constraints
-- Explicit technical decisions (CRDT choice, transport, persistence)
-- Honest reporting of partial failures
-- Proper use of "blocked" progress state
-
-Key lesson:
-A capsule can represent incomplete work without collapsing direction.
+# With real API
+pip install requests
+set ANTHROPIC_API_KEY=your_key   # Windows
+export ANTHROPIC_API_KEY=your_key  # Linux/Mac
+python run_drift_demo.py
+````
 
 ---
 
-## What makes these canonical?
+## How drift is estimated (v1)
 
-A valid CP-Core capsule:
+```
+drift_score = (violation_ratio × 0.7) + (decision_loss_ratio × 0.3)
+```
 
-- Declares intent, not process.
-- Uses constraints as negative space.
-- Locks architecture in decisions.
-- Reports state declaratively.
-- Avoids timestamps, history, and narrative.
+* **violation_ratio** — constraints explicitly broken (hard signal)
+* **decision_loss_ratio** — decisions not respected (soft signal)
 
-These examples are reference-grade.
+---
+
+## Limitations
+
+* Keyword-based evaluation, not semantic equivalence
+* Model outputs in mock mode are illustrative, not independent
+* A model can avoid flagged keywords while still drifting semantically
+* Single run, no variance measurement
+
+---
+
+## Interpretation
+
+Without CP-Core:
+execution continues — direction may drift
+
+With CP-Core:
+execution continues — direction is constrained
+
+---
+
+## Roadmap
+
+| Version   | Focus                                               |
+| --------- | --------------------------------------------------- |
+| v1 (this) | Concept illustration, keyword-based evaluation      |
+| v2        | Structured output, semantic validation              |
+| v3        | Multi-run evaluation, statistical drift measurement |
+
+**At v3, this transitions from illustration to evidence.**
+
+
+
