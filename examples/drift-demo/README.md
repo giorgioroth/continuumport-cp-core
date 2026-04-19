@@ -1,5 +1,8 @@
 # Drift Demo (v1 — concept)
 
+> ⚠️ This is a concept demo (v1).
+> See `../drift-demo-v2/` for the improved experimental version.
+
 Measures directional drift across model runs with and without a CP-Core capsule.
 
 ## What this shows
