@@ -1,6 +1,7 @@
+
 # Drift Demo (v1 — concept)
 
-Illustrates directional drift across model runs with and without a CP-Core capsule.
+***Illustrates directional drift across model runs with and without a CP-Core capsule.***
 
 ## What this shows
 
@@ -14,7 +15,7 @@ It does not constitute empirical measurement.
 
 ## How to run
 
-```bash
+```
 # Without API key (uses mock models)
 python run_drift_demo.py
 
@@ -23,7 +24,7 @@ pip install requests
 set ANTHROPIC_API_KEY=your_key   # Windows
 export ANTHROPIC_API_KEY=your_key  # Linux/Mac
 python run_drift_demo.py
-````
+```
 
 ---
 
