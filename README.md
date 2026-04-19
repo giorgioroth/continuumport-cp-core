@@ -246,14 +246,12 @@ Contributions are welcome! Please:
 
 ## Papers
 
-### Structural Modes of Continuity in Adaptive Systems
-SSRN Working Paper
+**Structural Bifurcation in Adaptive Systems: A Formal and Governance Analysis of Task and Identity Continuity**  
+SSRN Working Paper — [Abstract 6271360](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6271360)
 
-- PDF (GitHub canonical version):  
-  [Structural_Modes_of_Continuity.pdf](papers/Structural_Modes_of_Continuity.pdf)
-
-- SSRN abstract page:  
-  (coming soon)
+**Execution Control in Persistent AI Systems: A Geometry-Constrained Model**  
+SSRN Working Paper — [Abstract 6533358](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6533358)  
+*(under review — link active)*
 
 ---
 
