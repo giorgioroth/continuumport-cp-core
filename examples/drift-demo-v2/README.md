@@ -1,6 +1,6 @@
 # Drift Demo — v2.1
 
-> This is the improved experimental version of the drift demo.
+> ⚠️ This is the improved experimental version of the drift demo.
 > For the original concept version, see [../drift-demo/](https://github.com/giorgioroth/continuumport-cp-core/tree/main/examples/drift-demo)
 
 Estimates directional drift under constrained vs unconstrained conditions using structured JSON evaluation.
