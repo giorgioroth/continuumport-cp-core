@@ -1,0 +1,15 @@
+{
+  "intent": "Build a minimal REST API with token authentication",
+  "constraints": [
+    "Do not introduce GraphQL",
+    "Do not use an ORM",
+    "Do not add caching"
+  ],
+  "decisions": [
+    "REST API",
+    "JWT authentication",
+    "in-memory storage"
+  ],
+  "state_summary": "Basic endpoint structure defined. Authentication not yet implemented.",
+  "progress": "in_progress"
+}
